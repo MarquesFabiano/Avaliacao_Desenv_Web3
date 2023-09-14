@@ -18,12 +18,12 @@ def BuscaFilme(nome_filme, api_key):
             resultado = dados["results"][0]
 
             nome = resultado["title"]
+            descricao = resultado["overview"]
             ano = resultado["release_date"].split("-")[0]
-            diretor = resultado["overview"]
 
             print(f"Nome do Filme: {nome}")
             print(f"Ano: {ano}")
-            print(f"Descrição: {diretor}")
+            print(f"Descrição: {descricao}")
         else:
             print("Nenhum resultado encontrado para este filme. Revise o texto e digite novamente!")
     else:
